@@ -2,9 +2,9 @@
 % Please edit documentation in R/feature_extraction.R
 \name{get_features}
 \alias{get_features}
-\title{Calculate features from Talagala, Hyndman, Athanaspoulos & Lubba et al.
-and add them to the dataset
-.
+\title{Calculate 59 features from Talagala, Hyndman, Athanaspoulos (2018) and
+Lubba et al. (2019), without features associated with ETS model.
+and add them to the dataset.
 Output is a features \code{frame}.}
 \usage{
 get_features(dataset, n.cores = 1)
@@ -17,9 +17,9 @@ name \code{x}}
 parallel processing.}
 }
 \description{
-Calculate features from Talagala, Hyndman, Athanaspoulos & Lubba et al.
-and add them to the dataset
-.
+Calculate 59 features from Talagala, Hyndman, Athanaspoulos (2018) and
+Lubba et al. (2019), without features associated with ETS model.
+and add them to the dataset.
 Output is a features \code{frame}.
 }
 \examples{

@@ -2,7 +2,7 @@
 % Please edit documentation in R/forecast_series.r
 \name{forecast_series}
 \alias{forecast_series}
-\title{forecast the coming time series}
+\title{Forecast coming time series.}
 \usage{
 forecast_series(dataset, features = NULL, n.cores = 1)
 }
@@ -19,5 +19,5 @@ parallel processing.}
 A list with the elements having the following structure
 }
 \description{
-forecast the coming time series
+Forecast coming time series.
 }

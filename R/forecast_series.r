@@ -1,4 +1,4 @@
-#' forecast the coming time series
+#' Forecast coming time series.
 #'
 #' @param dataset A list the elements having a \code{ts} object with the
 #' name \code{x}.

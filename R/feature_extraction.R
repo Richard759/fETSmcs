@@ -1,6 +1,6 @@
-#' Calculate features from Talagala, Hyndman, Athanaspoulos & Lubba et al.
-#' and add them to the dataset
-#'.
+#' Calculate 59 features from Talagala, Hyndman, Athanaspoulos (2018) and
+#' Lubba et al. (2019), without features associated with ETS model.
+#' and add them to the dataset.
 #' Output is a features \code{frame}.
 #' @param dataset A list the elements having a \code{ts} object with the
 #' name \code{x}
