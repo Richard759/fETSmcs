@@ -53,7 +53,7 @@ model[[1]]
 #      AIC     AICc      BIC 
 # 411.2104 414.7104 419.8143 
 
-# Forecast using selected ETS models via our approach.
+# Forecast using the selected ETS models.
 forecast::forecast(model[[1]],level=c(95),data[[1]]$h)
 
 #      Point Forecast    Lo 95    Hi 95
