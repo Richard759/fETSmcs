@@ -10,7 +10,7 @@ Installation
 You can install the package `fbcsETS` from [GitHub Repository](https://github.com/Richard/fbcsETS) with:
 
 ``` r
-devtools::install_github("Richard/fbcsETS")
+devtools::install_github("Richard759/fETSmcs")
 ```
 
 Usage
@@ -28,13 +28,13 @@ library(forecast)
 data <- M4[1:10]
 features <- get_features(data, n.cores=4)
 
-# Forecast time series using feature-based ETS model in our working paper.
-model <- forecast_series(data, features,n.cores = 4)
+# Use time series features to predict an appropriate ETS model.
+model <- model_selection(data, features,n.cores = 4)
 
-# You can also directly put targeted series in function "forecast_series" without extracting features separately.
-model <- forecast_series(data, n.cores = 4)
+# You can also directly put targeted series in function "model_selection" without extracting features separately.
+model <- model_selection(data, n.cores = 4)
 
-# Output of the forecast function is ETS model whose method is predicted by our feature-based classifer.
+# The output of "model_selection" function is a list of ETS model.
 model[[1]]
 
 # ETS(A,Ad,N) 
@@ -53,7 +53,15 @@ model[[1]]
 #      AIC     AICc      BIC 
 # 411.2104 414.7104 419.8143 
 
-# Forecast series with feature-based ETS model component selection
+# Forecast series with feature-based ETS model component selection.
 forecast::forecast(model[[1]],level=c(95),data[[1]]$h)
+
+#      Point Forecast    Lo 95    Hi 95
+# 2010       7300.097 7059.589 7540.606
+# 2011       7337.579 6997.449 7677.708
+# 2012       7373.632 6957.048 7790.217
+# 2013       7408.312 6927.264 7889.361
+# 2014       7441.671 6903.821 7979.521
+# 2015       7473.759 6884.550 8062.968
 ```
 
