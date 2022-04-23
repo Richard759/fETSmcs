@@ -1,0 +1,16 @@
+Package: fbcsETS
+Title: Feature-based ETS model component selection (fbcsmsETS)
+Version: 1.0
+Authors@R: 
+    person("Lingzhi",
+           "Qi",
+           role = c("aut", "cre"),
+           email = "lingzhi_qi@163.com")
+Description: predict series with ETS method, and automatically select the ETS model component with feature-based method.
+Depends: R (>= 3.4.0)
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Imports: lightgbm, forecast, parallel, tibble, Rcatch22, tsfeatures, stats
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1.9000
