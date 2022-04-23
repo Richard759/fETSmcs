@@ -34,7 +34,7 @@ model <- forecast_series(data, features,n.cores = 4)
 model <- forecast_series(data, n.cores = 4)
 
 # Output of the forecast function is ETS model whose method is predicted by our feature-based classifer.
-part_model[[1]]
+model[[1]]
 
 # ETS(A,Ad,N) 
 #
