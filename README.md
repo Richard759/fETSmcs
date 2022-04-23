@@ -2,7 +2,7 @@
 ========
 
 An ETS model component selection approach that employs machine learning methodology to predict model component forms using time series features.
-The R package `fETSmcs` provides the implementations of ETS model selection for a given time series, and you can also use our simulated data to build your own classifier, see our [paper](https://github.com/Richard/fbcsETS) for more details.
+The R package `fETSmcs` provides the implementations of ETS model selection for a given time series, see our [paper](https://github.com/Richard/fbcsETS) for more details.
 
 Installation
 ------------
@@ -22,6 +22,7 @@ This part introduces how to use the model in our working paper to predict an app
 # Packages we need.
 library(fETSmcs)
 library(M4comp2018)
+library(forecast)
 
 # Extract features over time series.
 data <- M4[1:10]
@@ -51,5 +52,8 @@ model[[1]]
 #
 #      AIC     AICc      BIC 
 # 411.2104 414.7104 419.8143 
+
+# Forecast series with feature-based ETS model component selection
+forecast::forecast(model[[1]],level=c(95),data[[1]]$h)
 ```
 

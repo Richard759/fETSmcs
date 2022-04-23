@@ -14,7 +14,7 @@
 #' @importFrom forecast ets
 #' @importFrom forecast forecast
 #' @export
-forecast_series <- function(dataset, features=NULL, n.cores=1) {
+model_selection <- function(dataset, features=NULL, n.cores=1) {
   error_list<-c("A","M")
   trend_list<-c("A","Ad","N")
   seasonality_list<-c("A","M","N")
@@ -99,7 +99,7 @@ forecast_series <- function(dataset, features=NULL, n.cores=1) {
     }
   }
 
-  forecast_model <- list_process_fun(dataset,function (series) {
+  selected_model <- list_process_fun(dataset,function (series) {
     if (substring(series$method,3,3)=="d"){
       m<-paste0(substring(series$method,1,2),substring(series$method,4,4))
       ts_model<-try(forecast::ets(series$x,model = m, damped =TRUE))
@@ -123,7 +123,7 @@ forecast_series <- function(dataset, features=NULL, n.cores=1) {
     parallel::stopCluster(cl)
   }
 
-  forecast_model
+  selected_model
 }
 
 nloc<-function(x,n=1){

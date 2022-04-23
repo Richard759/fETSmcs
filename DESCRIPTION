@@ -1,5 +1,5 @@
-Package: fbcsETS
-Title: Feature-based ETS model component selection (fbcsmsETS)
+Package: fETSmcs
+Title: Feature-based ETS model component selection (fETSmcs)
 Version: 1.0
 Authors@R: 
     person("Lingzhi",
