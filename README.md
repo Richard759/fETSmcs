@@ -16,7 +16,7 @@ devtools::install_github("Richard759/fETSmcs")
 Usage
 -----
 
-This part introduces how to use the model in our working paper to predict an appropriate ETS model for targeted series.
+This part introduces how to use the method from our working paper to predict an appropriate ETS model for a given series.
 
 ``` r
 # Packages we need.
