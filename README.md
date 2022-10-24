@@ -2,7 +2,7 @@
 ========
 
 An ETS model component selection approach that employs machine learning methodology to predict model component forms using time series features.
-The R package `fETSmcs` provides the implementations of ETS model selection for a given time series, see our [paper](https://github.com/Richard/fbcsETS) for more details.
+The R package `fETSmcs` provides the implementations of ETS model selection for a given time series, see our [paper](https://www.sciencedirect.com/science/article/pii/S0169207022000954) for more details.
 
 Installation
 ------------
